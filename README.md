@@ -6,4 +6,4 @@ More info: https://www.vanderwaal.eu/mini-projecten/epplus-export-list-t-to-exce
 
 &nbsp;
 
-<img src="https://www.vanderwaal.eu/files/epplus-export-list-t-to-excel.jpg">
+<img src="https://www.vanderwaal.eu/files/epplus-export-list-t-to-excel.png">
