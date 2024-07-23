@@ -12,7 +12,10 @@ namespace WebApplication1
     {
         public static byte[] createExcel<T>(IEnumerable<T> list, string author, string title)
         {
-            using (ExcelPackage package = new ExcelPackage())
+            //set the epplus licence type
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+            using (var package = new ExcelPackage())
             {
                 //create the excel file and set some properties
                 package.Workbook.Properties.Author = author;
@@ -21,7 +24,11 @@ namespace WebApplication1
 
                 //create a new sheet
                 package.Workbook.Worksheets.Add("Sheet 1");
-                ExcelWorksheet ws = package.Workbook.Worksheets[1];
+
+                //note that old epplus version have indexes that start at 1
+                var ws = package.Workbook.Worksheets[0];
+
+                //sheet font properties
                 ws.Cells.Style.Font.Size = 11;
                 ws.Cells.Style.Font.Name = "Calibri";
 
